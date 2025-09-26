@@ -9,7 +9,7 @@
 ## 📊 Introduction  
 This project analyzes the **Australian Car Dataset** using **MySQL**, with the goal of **generating insights** that help automakers, dealerships, and buyers understand 💰 pricing trends, 🏆 brand performance, and 📈 market opportunities.  
 
-🔍 SQL queries? Check them out in the [`queries/`](queries) folder.  
+🔍 SQL queries? Check them out in the [`Queries/`](queries) folder.  
 
 ---
 
