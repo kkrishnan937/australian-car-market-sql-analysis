@@ -50,7 +50,7 @@ With SQL, I explored questions like:
 ### 2. Modern Cars (Post-2015) by Brand  
 ![Modern Cars Post 2015](Assets/styled_modern_cars_post2015.png)  
 💡 **Insights:**  
-- Toyota, Mazda, and Hyundai dominate **modern vehicle availability**.  
+- Toyota,Ford,Mazda, and Hyundai dominate **modern vehicle availability**.  
 - Reflects strong focus on **fuel-efficient and newer models**.  
 - Luxury brands trail behind in post-2015 offerings.  
 - Suggests where dealerships can focus for **modern inventory turnover**.  
