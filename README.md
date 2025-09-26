@@ -78,12 +78,14 @@ With SQL, I explored questions like:
 ---
 
 ### 5. Resale Value (Cars Older Than 10 Years)  
-![Resale Value](Assets/styled_resale_value.png)  
+![Resale Value](Assets/)  
+
 💡 **Insights:**  
-- Toyota and Lexus lead in **resale value retention**.  
-- High resale reflects strong **reliability perception**.  
-- Key driver of purchase decisions in the **used-car market**.  
-- Automakers can leverage this in **marketing campaigns**.  
+- **Mercedes-Benz, BMW, and Audi** lead in resale value for cars older than 10 years.  
+- Luxury brand desirability keeps their resale prices high compared to mainstream cars.  
+- Mass-market brands like **Toyota, Ford, and Volkswagen** still show strong long-term demand.  
+- Both **luxury appeal and reliability** play key roles in driving used-car resale strength.  
+  
 
 ---
 
