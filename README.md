@@ -2,12 +2,12 @@
   <img src="assets/banner.png" alt="Australian Car Dataset – SQL Insights" width="100%">
 </p>
 
-# 🚗 Australian Car Dataset – SQL Insights  
+# 🚗 Australian Car Market Dataset – SQL Insights  
 
 ---
 
 ## 📊 Introduction  
-This project analyzes the **Australian Car Dataset** using **MySQL**, with the goal of **generating insights** that help automakers, dealerships, and buyers understand 💰 pricing trends, 🏆 brand performance, and 📈 market opportunities.  
+This project analyzes the **Australian Car Market Dataset** using **MySQL**, with the goal of **generating insights** that help automakers, dealerships, and buyers understand 💰 pricing trends, 🏆 brand performance, and 📈 market opportunities.  
 
 🔍 SQL queries? Check them out in the [`Queries/`](Queries) folder.  
 
