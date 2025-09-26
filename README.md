@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Australian Car Dataset – SQL Insights" width="100%">
+  <img src="img.png" alt="Australian Car Dataset – SQL Insights" width="100%">
 </p>
 
 # 🚗 Australian Car Dataset – SQL Insights  
