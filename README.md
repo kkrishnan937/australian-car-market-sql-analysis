@@ -36,7 +36,7 @@ With SQL, I explored questions like:
 ## 🔍 Key Analysis & Insights  
 
 ### 1. Top 5 Most Expensive Cars  
-![Top 5 Expensive Cars](assets/styled_top5_expensive_cars.png)  
+![Top 5 Expensive Cars](Assets/styled_top5_expensive_cars.png)  
 💡 **Insights:**  
 - Luxury European brands dominate the **premium car segment**.  
 - Most expensive listings exceed **$600,000**, reflecting niche luxury markets.  
@@ -46,7 +46,7 @@ With SQL, I explored questions like:
 ---
 
 ### 2. Modern Cars (Post-2015) by Brand  
-![Modern Cars Post 2015](assets/styled_modern_cars_post2015.png)  
+![Modern Cars Post 2015](Assets/styled_modern_cars_post2015.png)  
 💡 **Insights:**  
 - Toyota, Mazda, and Hyundai dominate **modern vehicle availability**.  
 - Reflects strong focus on **fuel-efficient and newer models**.  
@@ -56,7 +56,7 @@ With SQL, I explored questions like:
 ---
 
 ### 3. Fuel Type Distribution  
-![Fuel Type Distribution](assets/styled_fuel_type_distribution.png)  
+![Fuel Type Distribution](Assets/styled_fuel_type_distribution.png)  
 💡 **Insights:**  
 - Petrol accounts for the **majority of listings**, followed by diesel.  
 - Hybrids and EVs are a **small but emerging segment**.  
@@ -66,7 +66,7 @@ With SQL, I explored questions like:
 ---
 
 ### 4. Average Price by Brand (Top 10)  
-![Average Price by Brand](assets/styled_avg_price_by_brand.png)  
+![Average Price by Brand](Assets/styled_avg_price_by_brand.png)  
 💡 **Insights:**  
 - Premium European brands (**Mercedes, BMW, Audi**) dominate price averages.  
 - Mass-market brands fall far below, showing **clear segmentation**.  
@@ -76,7 +76,7 @@ With SQL, I explored questions like:
 ---
 
 ### 5. Resale Value (Cars Older Than 10 Years)  
-![Resale Value](assets/styled_resale_value.png)  
+![Resale Value](Assets/styled_resale_value.png)  
 💡 **Insights:**  
 - Toyota and Lexus lead in **resale value retention**.  
 - High resale reflects strong **reliability perception**.  
@@ -86,7 +86,7 @@ With SQL, I explored questions like:
 ---
 
 ### 6. Top Cars by Overall Value  
-![Top Cars by Value](assets/styled_top_cars_value.png)  
+![Top Cars by Value](Assets/styled_top_cars_value.png)  
 💡 **Insights:**  
 - Balancing **price, age, and mileage**, Japanese brands dominate.  
 - These cars reflect the **best deals for budget-conscious buyers**.  
