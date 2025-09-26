@@ -78,7 +78,7 @@ With SQL, I explored questions like:
 ---
 
 ### 5. Resale Value (Cars Older Than 10 Years)  
-![Resale Value](Assets/)  
+![Resale Value](Assets/styled_resale_value.png)  
 
 💡 **Insights:**  
 - **Mercedes-Benz, BMW, and Audi** lead in resale value for cars older than 10 years.  
