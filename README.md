@@ -1,106 +1,94 @@
 <p align="center">
-  <img src="img.png" alt="Australian Car Dataset – SQL Insights" width="100%">
+  <img src="img.png" alt="Australian Car Dataset – SQL Analysis" width="100%">
 </p>
 
-# 🚗 Australian Car Dataset – SQL Insights  
+# Australian Car Listings Analysis with SQL
 
----
+A MySQL learning project exploring prices, vehicle characteristics, and listing composition in an Australian car dataset. The analysis uses filtering, aggregation, common table expressions, and ranking to investigate questions relevant to buyers and dealerships.
 
-## 📊 Introduction  
-This project analyzes the **Australian Car Dataset** using **MySQL**, with the goal of **generating insights** that help automakers, dealerships, and buyers understand 💰 pricing trends, 🏆 brand performance, and 📈 market opportunities.  
+## Business questions
 
-🔍 SQL queries? Check them out in the [`queries/`](Queries) folder. 
+- Which listings have the highest advertised prices?
+- Which brands have the most listings for vehicles manufactured after 2015?
+- How are fuel types distributed within the dataset?
+- How do average advertised prices differ by brand?
+- Which brands have the highest average asking prices among older vehicles?
+- How might price, model year, and mileage inform a shortlist for further investigation?
 
-🔍 Dataset Link - "https://www.kaggle.com/datasets/lainguyn123/australia-car-market-data/data"
+These are exploratory questions about the available listings. They do not establish national sales, market demand, depreciation, or an individual vehicle's quality.
 
----
+## Data and tools
 
-## 🗂️ Background  
-The dataset includes details such as **brand, model, year, kilometers, price, type, and fuel**.  
-With SQL, I explored questions like:  
+- **Dataset:** [Australia Car Market Data on Kaggle](https://www.kaggle.com/datasets/lainguyn123/australia-car-market-data/data)
+- **Fields used:** brand, model/name, model year, kilometres, price, vehicle type, fuel, and engine size.
+- **Tools:** MySQL, Visual Studio Code, Git, and GitHub.
+- **Files:** [SQL queries](Queries), [dataset directory](Dataset), and [visualizations](Assets).
 
-- What are the **most expensive cars** in Australia?  
-- Which brands dominate in **modern car availability**?  
-- How are **fuel types** distributed across the market?  
-- Which brands command **premium average prices**?  
-- Which brands retain the best **resale value**?  
-- What are the **best overall value cars**?  
+## Analysis walkthrough
 
----
+### 1. Highest-priced listings
 
-## ⚙️ Tools I Used  
-- 🛢️ **MySQL** → data queries and insights  
-- 💻 **Visual Studio Code** → SQL execution  
-- 🗂️ **Git & GitHub** → project versioning and sharing  
+![Highest-priced listings](Assets/styled_top5_expensive_cars.png)
 
----
+This view ranks the highest advertised prices in the dataset. A small group of expensive listings is useful for identifying outliers and inspecting the premium end of the sample. It does not establish which brands dominate the wider premium market or what buyers actually paid.
 
-## 🔍 Key Analysis & Insights  
+### 2. Vehicles manufactured after 2015, by brand
 
-### 1. Top 5 Most Expensive Cars  
-![Top 5 Expensive Cars](Assets/styled_top5_expensive_cars.png)  
-💡 **Insights:**  
-- Luxury European brands dominate the **premium car segment**.  
-- Most expensive listings exceed **$600,000**, reflecting niche luxury markets.  
-- A sharp contrast with brand averages shows significant **price inequality**.  
-- Highlights automakers’ positioning in the **ultra-luxury range**.  
+![Post-2015 listings by brand](Assets/styled_modern_cars_post2015.png)
 
----
+The [query](Queries/2_how_many_modern_cars_after_2015.sql) counts listings with a model year greater than 2015. This describes sample availability, not inventory turnover, fuel efficiency, or dealership sales performance. "After 2015" is a fixed model-year filter, not a rolling definition of a modern vehicle.
 
-### 2. Modern Cars (Post-2015) by Brand  
-![Modern Cars Post 2015](Assets/styled_modern_cars_post2015.png)  
-💡 **Insights:**  
-- Toyota,Ford,Mazda, and Hyundai dominate **modern vehicle availability**.  
-- Reflects strong focus on **fuel-efficient and newer models**.  
-- Luxury brands trail behind in post-2015 offerings.  
-- Suggests where dealerships can focus for **modern inventory turnover**.  
+### 3. Fuel type distribution
 
----
+![Fuel type distribution](Assets/styled_fuel_type_distribution.png)
 
-### 3. Fuel Type Distribution  
-![Fuel Type Distribution](Assets/styled_fuel_type_distribution.png)  
-💡 **Insights:**  
-- Petrol accounts for the **majority of listings**, followed by diesel.  
-- Hybrids and EVs are a **small but emerging segment**.  
-- Shows Australia’s **slower EV adoption** compared to global markets.  
-- Critical input for **automakers planning fuel strategy investments**.  
+The [query](Queries/3_fuel_type_distribution.sql) calculates each fuel type's share of the dataset's listings. This can inform further investigation of the sample's composition. A single listing snapshot cannot establish national EV adoption, growth over time, or how Australia compares with other countries.
 
----
+### 4. Average advertised price by brand
 
-### 4. Average Price by Brand (Top 10)  
-![Average Price by Brand](Assets/styled_avg_price_by_brand.png)  
-💡 **Insights:**  
-- Premium European brands (**Mercedes, BMW, Audi**) dominate price averages.  
-- Mass-market brands fall far below, showing **clear segmentation**.  
-- Strong price leadership reflects **brand equity and consumer trust**.  
-- Confirms luxury brands’ dominance in the **high-value car market**.  
+![Average advertised price by brand](Assets/styled_avg_price_by_brand.png)
 
----
+The [query](Queries/4_avg_price_of_cars_bybrand.sql) returns the ten highest brand-level average prices and their listing counts. Differences can reflect the mix of models, ages, mileage, and outliers. They do not independently measure brand equity or consumer trust. Median prices and comparable vehicle groups would provide useful checks.
 
-### 5. Resale Value (Cars Older Than 10 Years)  
-![Resale Value](Assets/styled_resale_value.png)  
+### 5. Average asking price among older vehicles
 
-💡 **Insights:**  
-- **Mercedes-Benz, BMW, and Audi** lead in resale value for cars older than 10 years.  
-- Luxury brand desirability keeps their resale prices high compared to mainstream cars.  
-- Mass-market brands like **Toyota, Ford, and Volkswagen** still show strong long-term demand.  
-- Both **luxury appeal and reliability** play key roles in driving used-car resale strength.  
-  
+![Older-vehicle asking prices](Assets/styled_resale_value.png)
 
----
+The [existing query](Queries/9_brand_with_highest_resale_value.sql) groups vehicles whose model year is at least ten years before the current calendar year, retaining brands with more than 100 eligible listings.
 
-### 6. Top Cars by Overall Value  
-![Top Cars by Value](Assets/styled_top_cars_value.png)  
-💡 **Insights:**  
-- Balancing **price, age, and mileage**, Japanese brands dominate.  
-- These cars reflect the **best deals for budget-conscious buyers**.  
-- Value cars offer **practical alternatives** to luxury vehicles.  
-- Insightful for dealerships targeting **cost-sensitive market segments**.  
+The query and chart use "resale value" terminology, but the measured quantity is **average advertised price among eligible older vehicles**. It is not a measure of value retention: original purchase prices, completed sale prices, and comparable age, model, mileage, and condition are needed to assess depreciation fairly.
 
----
+The query uses `CURDATE()`, so the eligible model years change as time passes even if the dataset stays the same. An explicit analysis date is needed to reproduce an earlier result. The model-year cutoff also does not establish each vehicle's exact age.
 
-## 🏁 Closing Thoughts  
-This project demonstrates how **SQL can turn raw automotive data into actionable insights**.  
-By identifying trends in pricing, brand performance, fuel adoption, and resale value, the analysis supports data-driven decision-making for automakers and dealerships.  
+### 6. Experimental vehicle shortlist
 
----
+![Experimental value score](Assets/styled_top_cars_value.png)
+
+The [existing scoring query](Queries/12_top_cars_by_overall_value.sql) combines differences from the dataset averages for model year, price, and kilometres, with weights of 0.4, 0.4, and 0.2.
+
+**Method limitation:** the inputs use different units and scales. Those weights do not represent 40%, 40%, and 20% relative influence; dollar and kilometre magnitudes can overwhelm model-year differences. The resulting ranking is an experimental calculation, not a validated "best value" recommendation.
+
+A stronger method would normalize the inputs, justify buyer priorities, handle missing or implausible values, and test how rankings change under alternative weights. Condition, service history, and ownership costs would still require separate assessment.
+
+## Interpretation and validation status
+
+The charts are existing project artifacts. They have not been regenerated as part of this documentation update; this README does not assert fresh numerical results or claim that existing charts have been reconciled with a new query run.
+
+Before using the analysis for a decision:
+
+1. Record the dataset version, collection period, license, and analysis date.
+2. Validate missing values, duplicate listings, price units, and implausible price or mileage records.
+3. Re-run the queries and save their outputs alongside the charts.
+4. Check counts and medians before interpreting brand-level averages.
+5. Distinguish advertised prices from sale prices and sample composition from market-wide conclusions.
+
+## Relevance to business analysis
+
+The project illustrates how to translate questions into measurable SQL outputs and evaluate whether a metric supports a proposed conclusion. Its current scope is a learning exercise. Recommendations for actual purchasing or inventory decisions would require validated data, explicit stakeholder priorities, and additional evidence.
+
+## Next improvements
+
+- Replace the moving older-vehicle cutoff with a documented reference date.
+- Redesign and validate the experimental value score.
+- Add repeatable import instructions, query outputs, and chart-generation steps.
+- Present findings with sample sizes, limitations, and clearly stated decision implications.
